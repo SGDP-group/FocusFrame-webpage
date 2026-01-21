@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
         <div className="hero__content">
           <p className="hero__tagline">
-            Getting your work done while avoiding disturbances has never felt this easy . . .
+            Getting your work done while avoiding disturbances has never felt this easier . . .
           </p>
         </div>
       </div>
