@@ -1,0 +1,132 @@
+.solution {
+  padding: 6rem 2rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.solution__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.solution__header {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.solution__products {
+  display: grid;
+  gap: 3rem;
+}
+
+.solution__product {
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.solution__product::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+
+.solution__product:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 32px rgba(0, 212, 170, 0.15);
+  transform: translateY(-4px);
+}
+
+.solution__product:hover::before {
+  transform: scaleX(1);
+}
+
+.solution__product-label {
+  display: inline-block;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.solution__product-title {
+  font-size: 1.75rem;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.solution__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.solution__list li {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.solution__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+.solution__list strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.solution__note {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .solution {
+    padding: 4rem 1.5rem;
+  }
+
+  .solution__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .solution__products {
+    gap: 2rem;
+  }
+
+  .solution__product {
+    padding: 2rem 1.5rem;
+  }
+
+  .solution__product-title {
+    font-size: 1.5rem;
+  }
+}

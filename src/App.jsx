@@ -1,5 +1,6 @@
-import { Navbar, Hero, Features, About, Contact } from './components';
+import { Navbar, Hero, Features, About, Contact, Problem, Footer } from './components';
 import './App.css';
+import Solution from './components/sections/Solution';
 
 function App() {
   return (
@@ -7,10 +8,13 @@ function App() {
       <Navbar />
       <main className="main">
         <Hero />
+        <Problem />
+        <Solution />
         <Features />
         <About />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

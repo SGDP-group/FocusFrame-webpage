@@ -2,6 +2,10 @@ import './Navbar.css';
 
 const Navbar = () => {
   const navLinks = [
+    { label: 'Home', href: '#' },
+    { label: 'Problem', href: '#problem' },
+    { label: 'Solution', href: '#solution' },
+    { label: 'Features', href: '#features' },
     { label: 'About', href: '#about' },
     { label: 'Contact Us', href: '#contact' },
     { label: 'Buy Now', href: '#buy' },
