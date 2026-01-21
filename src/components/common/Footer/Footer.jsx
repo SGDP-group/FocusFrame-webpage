@@ -29,6 +29,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        
+        <div className="footer__bottom">
+          <p className="footer__copyright">&copy; 2026 FocusFrame. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
