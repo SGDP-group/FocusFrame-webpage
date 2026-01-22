@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Button from '../../common/Button';
 import './Contact.css';
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +20,27 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    emailjs
+    .send(
+      'service_5rrq0af',
+      'template_fdvma44',
+      {
+        from_email: formData.email,
+        message: formData.message,
+      },
+      '4gvDLvM4ExkRZ_g4c'
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        alert('Email sent!');
+        setFormData({email:'', message:''});
+      },
+      (error)=>{
+        console.log(error.text);
+        alert("Failed to send email")
+      }
+    )
     console.log('Form submitted:', formData);
   };
 
@@ -62,11 +84,11 @@ const Contact = () => {
           </div>
           <div className="contact__info-section">
             <div className="contact__info">
-              <a href="mailto:focusFrame@gmail.com" className="contact__link">
+              <a href="mailto:sethsuna333@gmail.com" className="contact__link">
                 focusFrame@gmail.com
               </a>
-              <a href="tel:077XXXXXXX" className="contact__link">
-                077 - XXX XXXX
+              <a href="tel:+94 76 3041512" className="contact__link">
+                +94 76 3041512
               </a>
             </div>
           </div>
